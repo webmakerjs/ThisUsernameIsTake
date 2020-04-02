@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>َAnimated Login Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+<div class="box">
+  <h1 id="screen">calc</h1>
+  <div id="col">
+  <input type="text" id="result">
+  <input style="position:absolute;top:60px;left:310px;" type="button" onclick="clr()" value="c">
+  </div>
+  <div id="col1">
+  <input style="position:absolute;top:140px;left:70px;" type="button" onclick="char('7')" value="7">
+  <input style="position:absolute;top:200px;left:70px;" type="button" onclick="char('4')" value="4">
+  <input style="position:absolute;top:260px;left:70px; " type="button" onclick="char('1')" value="1">
+  <input style="position:absolute;top:320px;left:70px;padding:9px 55px;" type="button" onclick="char('0')" value="0">
+  </div>
+  <div id="col2">
+  <input style="position:absolute;top:140px;left:150px;" type="button" onclick="char('8')" value="8">
+  <input style="position:absolute;top:200px;left:150px;" type="button" onclick="char('5')" value="5">
+  <input style="position:absolute;top:260px;left:150px;" type="button" onclick="char('2')" value="2">
+  </div>
+  <div id="col3">
+    <input style="position:absolute;top:140px;left:230px;" type="button" onclick="char('9')" value="9">
+    <input style="position:absolute;top:200px;left:230px;" type="button" onclick="char('6')" value="6">
+    <input style="position:absolute;top:260px;left:230px;" type="button" onclick="char('3')" value="3">
+    <input style="position:absolute;top:320px;left:230px;" type="button" onclick="solve()" value="=">
+  </div>
+  <div id="col4">
+    <input style="position:absolute;top:140px;left:310px;padding:9px 17px;" type="button" onclick="char('/')" value="/">
+    <input style="position:absolute;top:200px;left:310px;padding:9px 17px;" type="button" onclick="char('*')" value="*">
+    <input style="position:absolute;top:260px;left:310px;padding:9px 17px;" type="button" onclick="char('-')" value="-">
+    <input style="position:absolute;top:320px;left:310px;" type="button" onclick="char('+')" value="+">
+  </div>
+</div>
+<script>
+//function that display value
+      function char(val)
+      {
+          document.getElementById("result").value+=val
+      }
+      //function that evaluates the digit and return result
+      function solve()
+      {
+          let x = document.getElementById("result").value
+          let y = eval(x)
+          document.getElementById("result").value = y
+      }
+      //function that clear the display
+      function clr()
+      {
+          document.getElementById("result").value = ""
+      }
+</script>
+
+
+  </body>
+</html>
